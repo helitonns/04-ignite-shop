@@ -12,18 +12,15 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      primary: "#0070f3",
-      secondary: "#1db954",
-      background: "#f0f0f0",
-      text: "#333333",
+      white: "#ffffff",
+      
+      gray900: "#121214",
+      gray800: "#202024",
+      gray300: "#c4c4cc",
+      gray100: "#c1c1e6",
+      
+      green500: "#00875f",
+      green300: "#00b37e",
     },
-    fonts: {
-      body: "Arial, sans-serif",
-      heading: "Georgia, serif",
-    },
-  },
-  media: {
-    bp1: "(max-width: 600px)",
-    bp2: "(max-width: 900px)",
-  },
+  }
 });
