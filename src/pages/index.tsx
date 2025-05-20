@@ -1,23 +1,25 @@
-import { styled } from "../styles";
-
-const Button = styled("button", {
-  backgroundColor: "$primary",
-  color: "$white",
-  padding: "10px 20px",
-  borderRadius: "5px",
-  border: "none",
-  cursor: "pointer",
-
-  "&:hover": {
-    backgroundColor: "$secondary",
-  },
-});
+import Image from "next/image";
+import camisa1 from "../assets/1.png";
+import camisa2 from "../assets/2.png";
+import { HomeContainer, Product } from "../styles/pages/home";
 
 export default function Home() {
   return (
-    <>
-      <h1>Hello World!</h1>
-      <Button>Click Me</Button>
-    </>
+    <HomeContainer>
+      <Product>
+        <Image src={camisa1} width={520} height={480} alt="" />
+        <footer>
+          <strong>Camiseta X</strong>
+          <span>R$ 79,99</span>
+        </footer>
+      </Product>
+      <Product>
+        <Image src={camisa2} width={520} height={480} alt="" />
+        <footer>
+          <strong>Camiseta X</strong>
+          <span>R$ 79,99</span>
+        </footer>
+      </Product>
+    </HomeContainer>
   );
 };
