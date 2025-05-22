@@ -3,7 +3,7 @@ import { styled } from "..";
 export const ProductContainer = styled("main", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
-  alignItems:"stretch",
+  alignItems: "stretch",
   gap: "4rem",
 
   maxWidth: 1180,
@@ -24,7 +24,7 @@ export const ImageContainer = styled("div", {
 
   img: {
     objectFit: "cover",
-  }
+  },
 });
 
 export const ProductDetails = styled("div", {
@@ -61,9 +61,14 @@ export const ProductDetails = styled("div", {
     fontWeight: "bold",
     fontSize: "$md",
 
-    "&:hover": {
+    "&:disabled": {
+      opacity: 0.6,
+      cursor: "not-allowed",
+    },
+
+    "&:not(:disabled):hover": {
       backgroundColor: "$green300",
       transition: "background-color 0.2s ease-in-out",
-    }
-  }
+    },
+  },
 });
